@@ -1,2 +1,2 @@
-# optimization
-Projet à but éducatif de comparaison des performances d'algorithmes.
+# Optimization
+Comparaison des performances d'algorithmes.
