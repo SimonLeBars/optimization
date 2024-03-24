@@ -1,8 +1,12 @@
 package optimization.hashmap;
 
+import optimization.hashmap.chicken.Chicken;
+
 import java.util.*;
 
-public class HashMapUtils {
+public class GenerateUtil {
+
+    private GenerateUtil(){}
 
     public static Set<String> generateUniqueIdentifiers(int numIdentifiers) {
         Set<String> uniqueIdentifiers = new HashSet<>();
@@ -22,7 +26,16 @@ public class HashMapUtils {
         return uniqueIdentifiers;
     }
 
-    public List<Chicken> createList(Set<String> ids) {
+    public static String selectRandomIdentifier(Set<String> identifiers) {
+        long n = Math.round(Math.random() * identifiers.size());
+        Iterator<String> iterator = identifiers.iterator();
+        for (long i = 0; i < n && iterator.hasNext(); i++) {
+            identifiers.iterator().next();
+        }
+        return identifiers.iterator().next();
+    }
+
+    public static List<Chicken> createList(Set<String> ids) {
         List<Chicken> chickens = new ArrayList<>();
         for (String id: ids) {
             chickens.add(new Chicken(id));
@@ -30,7 +43,15 @@ public class HashMapUtils {
         return chickens;
     }
 
-    public TreeMap<String, Chicken> createTreeMap(Set<String> ids) {
+    public static List<Chicken> createList(Set<String> ids, int age) {
+        List<Chicken> chickens = new ArrayList<>();
+        for (String id: ids) {
+            chickens.add(new Chicken(id, age));
+        }
+        return chickens;
+    }
+
+    public static TreeMap<String, Chicken> createTreeMap(Set<String> ids) {
         TreeMap<String, Chicken> chickens = new TreeMap<>();
         for (String id: ids) {
             chickens.put(id, new Chicken(id));
@@ -38,7 +59,7 @@ public class HashMapUtils {
         return chickens;
     }
 
-    public HashMap<String, Chicken> createHashMap(Set<String> ids) {
+    public static HashMap<String, Chicken> createHashMap(Set<String> ids) {
         HashMap<String, Chicken> chickens = new HashMap<>();
         for (String id: ids) {
             chickens.put(id, new Chicken(id));

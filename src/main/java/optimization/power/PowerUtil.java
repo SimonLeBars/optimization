@@ -2,7 +2,10 @@ package optimization.power;
 
 import java.math.BigInteger;
 
-public class PowerUtils {
+public class PowerUtil {
+
+    private PowerUtil(){}
+
     public static BigInteger powerWithIterativeMultiply(int a, int b) {
         BigInteger result = BigInteger.valueOf(1);
         for (int i = 0; i < b; i++) {

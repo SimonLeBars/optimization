@@ -52,14 +52,14 @@ public class MultiplyTests {
     @Order(value = 2)
     void multiplyWithIterativeAddition(){
         logger.info("multiplyWithIterativeAddition");
-        multiplyWithIterativeAddition = MultiplyUtils.multiplyWithIterativeAddition(A, B);
+        multiplyWithIterativeAddition = MultiplyUtil.multiplyWithIterativeAddition(A, B);
     }
 
     @Test
     @Order(value = 3)
     void multiplyWithMerge() throws Exception {
         logger.info("multiplyWithMerge");
-        multiplyWithMerge = MultiplyUtils.multiplyWithMerge(A, B);
+        multiplyWithMerge = MultiplyUtil.multiplyWithMerge(A, B);
     }
 
     @AfterAll

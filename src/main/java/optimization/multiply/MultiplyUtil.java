@@ -2,7 +2,10 @@ package optimization.multiply;
 
 import java.math.BigInteger;
 
-public class MultiplyUtils {
+public class MultiplyUtil {
+
+    private MultiplyUtil(){}
+
     public static BigInteger multiplyWithIterativeAddition(int a, int b) {
         BigInteger result = BigInteger.valueOf(a);
         for (int i = 1; i < b; i++) {

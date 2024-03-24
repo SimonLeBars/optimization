@@ -52,14 +52,14 @@ public class PowerTests {
     @Order(value = 2)
     void powerWithIterativeMultiply(){
         logger.info("powerWithIterativeMultiply");
-        powerWithIterativeMultiply = PowerUtils.powerWithIterativeMultiply(A, B);
+        powerWithIterativeMultiply = PowerUtil.powerWithIterativeMultiply(A, B);
     }
 
     @Test
     @Order(value = 3)
     void powerWithMerge() throws Exception {
         logger.info("powerWithMerge");
-        powerWithMerge = PowerUtils.powerWithMerge(A, B);
+        powerWithMerge = PowerUtil.powerWithMerge(A, B);
     }
 
     @AfterAll

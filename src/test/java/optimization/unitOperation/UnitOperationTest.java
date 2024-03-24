@@ -33,22 +33,59 @@ public class UnitOperationTest {
 
     @Test
     @Order(value = 1)
-    void onePlusOne() {
-        logger.info("onePlusOne");
-        UnitOperationUtils.onePlusOne(BigInteger.valueOf(A));
+    void init() {
+        logger.info("init");
+        UnitOperationUtil.basicLoop(BigInteger.valueOf(A));
     }
 
     @Test
     @Order(value = 2)
-    void aBitPlusABit(){
-        logger.info("aBitPlusABit");
-        UnitOperationUtils.aBitPlusABit(BigInteger.valueOf(A));
+    void basicLoop() {
+        logger.info("basicLoop");
+        UnitOperationUtil.basicLoop(BigInteger.valueOf(A));
     }
 
     @Test
     @Order(value = 3)
+    void basicLoopTwoTimes() {
+        logger.info("basicLoopTwoTimes");
+        UnitOperationUtil.basicLoop(BigInteger.valueOf(A));
+        UnitOperationUtil.basicLoop(BigInteger.valueOf(A));
+    }
+
+    @Test
+    @Order(value = 4)
+    void basicLoopTwiceLonger() {
+        logger.info("basicLoopTwiceLonger");
+        UnitOperationUtil.basicLoop(BigInteger.valueOf(A+A));
+    }
+
+    @Test
+    @Order(value = 5)
+    void loopWithAddition() {
+        logger.info("loopWithAddition");
+        UnitOperationUtil.loopWithAddition(BigInteger.valueOf(A));
+    }
+
+    @Test
+    @Order(value = 6)
+    void loopWithAdditionTwoTimes() {
+        logger.info("loopWithAddition");
+        UnitOperationUtil.loopWithAddition(BigInteger.valueOf(A));
+        UnitOperationUtil.loopWithAddition(BigInteger.valueOf(A));
+    }
+
+    @Test
+    @Order(value = 7)
+    void aBitPlusABit(){
+        logger.info("aBitPlusABit");
+        UnitOperationUtil.aBitPlusABit(BigInteger.valueOf(A));
+    }
+
+    @Test
+    @Order(value = 8)
     void aLotPlusALot(){
         logger.info("aLotPlusALot");
-        UnitOperationUtils.aLotPlusALot(BigInteger.valueOf(A));
+        UnitOperationUtil.aLotPlusALot(BigInteger.valueOf(A));
     }
 }
